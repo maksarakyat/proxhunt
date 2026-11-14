@@ -23,4 +23,5 @@ jobs:
       - name: CLI smoke test
         run: |
           python -m proxhunt --version
-          python -m proxhunt sources | head -5
+          python -m proxhunt sources > /tmp/proxhunt-sources.txt
+          test -s /tmp/proxhunt-sources.txt
