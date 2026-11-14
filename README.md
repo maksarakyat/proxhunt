@@ -555,7 +555,8 @@ not capacity planning.
 
 | Metric | Result |
 |---|---|
-| Sources scraped | 28 |
+| Sources configured | 28 |
+| Sources used in the benchmark run | 26 (`http,socks5`) |
 | Unique candidates | 16,976 |
 | Candidates validated in one run | 12,386 |
 | Validation runtime | 147 s |
