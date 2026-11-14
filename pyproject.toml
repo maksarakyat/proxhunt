@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proxhunt"
+version = "1.0.0"
+description = "Discover, validate, and rotate public HTTP/SOCKS proxies for authorized security work."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "PROXHUNT contributors" }]
+keywords = ["proxy", "rotator", "socks5", "scraping", "osint", "security"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: Proxy Servers",
+    "Topic :: Security",
+]
+dependencies = [
+    "aiohttp>=3.10,<4",
+    "aiohttp-socks>=0.8,<1",
+]
+
+[project.scripts]
+proxhunt = "proxhunt.cli:main"
+
+[tool.setuptools]
+packages = ["proxhunt"]
